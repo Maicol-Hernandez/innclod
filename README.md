@@ -7,8 +7,8 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## ¿Cuáles son los requisitos del servidor para activar el script?
-# Respuesta: Para instalar el Script los requisitos mínimos del servidor son:
+# ¿Cuáles son los requisitos del servidor para activar el script?
+## Respuesta: Para instalar el Script los requisitos mínimos del servidor son:
 
 - [Php version 8.2+]
 - [MySQL 10.4+-MariaDB]
