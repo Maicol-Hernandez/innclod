@@ -48,42 +48,41 @@ En la mayoría de los servidores, estas extensiones están activadas por defecto
 ## Respuesta: Para registrarse en el sitema siga los siguientes pasos.
 
 - Presione en el botón Register.
-- Navegar a la página de Registe`
+- Navegar a la página de Registe.
 - Llenar los campos Name, Email, Password y Confirm Parssword.
 - Hacer clic en el botón de "Register" para acceder al sistema.
 - Si todo ha salido bien, saldrá el siguiente mensaje "You're logged in!".
-## Laravel Sponsors
+# 4.¿Cómo crear un nuevo documento?
+## Respuesta: Para agregar un documento nuevo en el sistema siga los siguientes pasos.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+- Presione en el botón ubicado en Navbar superior donde dice "Documents".
+- Navegar a la página de Documents.
+- Hacer clic en el botón "Add" ubicado en la parte superior de la tabla "Documents".
+- Será redirigido hacia el formulario "Create Document".
+- Llenar los campos requeridos para crear un nuevo documento.
+- Hacer clic él en botón "save", para guardar.
+- Si todo ha salido bien, será redireccionado a la tabla de "Documents".
+# 5.¿Cómo editar un documento?
+## Respuesta: Para editar un documento registrado en el sistema siga los siguientes pasos.
 
-### Premium Partners
+- Hacer clic en el botón "Edit" ubicado dentro de la tabla "Documents".
+- Será redirigido hacia el formulario "Edit Document".
+- Editar los valores dentro del formulario.
+- Hacer clic él en botón "save", para guardar.
+- Si todo ha salido bien, será redireccionado a la tabla de "Documents".
+# 6.¿Cómo eliminar un documento?
+## Respuesta: Para eliminar un documento registrado en el sistema siga los siguientes pasos.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+- Hacer clic en el botón "Delete" ubicado dentro de la tabla "Documents".
+- Será redirigido hacia el formulario "Edit Document".
+- Editar los valores dentro del formulario.
+- Hacer clic él en botón "save", para guardar.
+- Si todo ha salido bien, será redireccionado a la tabla de "Documents".
+# 7.¿Cómo cerrar sesión?
+## Respuesta: Para cerrar sesión en el sistema siga los siguientes pasos.
 
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- Hacer clic en el botón "Dashboard" ubicado en la parte superior izquierda del Navbar.
+- Será redirigido hacia el "Dashboard" del sistema.
+- Hacer clic en el botón "Profile" del usuario, ubicado en la parte superior derecha del Navbar.
+- Hacer clic él en botón "Log Out", para cerrar sesión.
+- Si todo ha salido bien, será redireccionado a la página inicio del sistema.
