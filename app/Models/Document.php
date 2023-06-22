@@ -12,11 +12,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
  * Class Document
  *
  * @property integer $id
- * @property string $nombre
- * @property string $codigo
- * @property string $contenido
- * @property \App\Models\TypeDocument $tipo_documento_id
- * @property \App\Models\Process $proceso_id
+ * @property string $name
+ * @property string $code
+ * @property string $description
+ * @property \App\Models\TypeDocument $type_document_id
+ * @property \App\Models\Process $process_id
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
  * 
@@ -35,11 +35,11 @@ class Document extends Model
      * @var array
      */
     protected $fillable = [
-        'nombre',
-        'codigo',
-        'contenido',
-        'tipo_documento_id',
-        'proceso_id',
+        'name',
+        'code',
+        'description',
+        'type_document_id',
+        'process_id',
     ];
 
 
