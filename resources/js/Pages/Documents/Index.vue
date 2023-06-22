@@ -6,7 +6,7 @@ import { Head, Link, useForm } from '@inertiajs/vue3';
 import { ref, watch, defineProps } from "vue";
 
 const props = defineProps({
-    documents: { type: Object }
+    documents: { type: Object },
 })
 
 const search = ref('')
@@ -61,6 +61,8 @@ const deleteDocument = (id, name) => {
                             <td class="px-2 py-2">Name</td>
                             <td class="px-2 py-2">Code</td>
                             <td class="px-2 py-2">Description</td>
+                            <td class="px-2 py-2">Process Name</td>
+                            <td class="px-2 py-2">Type Document</td>
                         </tr>
                     </thead>
                     <tbody>
@@ -69,6 +71,8 @@ const deleteDocument = (id, name) => {
                             <td class="border border-gray-400 px-2 py-2">{{ document.name }}</td>
                             <td class="border border-gray-400 px-2 py-2">{{ document.code }}</td>
                             <td class="border border-gray-400 px-2 py-2">{{ document.description }}</td>
+                            <td class="border border-gray-400 px-2 py-2">{{ document.process.name }}</td>
+                            <td class="border border-gray-400 px-2 py-2">{{ document.type_document.name }}</td>
                             <td class="border border-gray-400 px-2 py-2">
                                 <Link :href="route('documents.edit', document.id)"
                                     :class="'px-4 py-2 bg-yellow-400 text-white border rounded-md font-semibold text-xs'">
