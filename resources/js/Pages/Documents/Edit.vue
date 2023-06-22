@@ -23,11 +23,11 @@ const form = useForm({
 </script>
 
 <template>
-    <Head title="Create Document" />
+    <Head title="Edit Document" />
 
     <AuthenticatedLayout>
         <template #header>
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">Create Document</h2>
+            <h2 class="font-semibold text-xl text-gray-800 leading-tight">Edit Document</h2>
         </template>
 
         <div class="py-12">
@@ -61,4 +61,5 @@ const form = useForm({
                 </div>
             </div>
         </div>
-    </AuthenticatedLayout></template>
+    </AuthenticatedLayout>
+</template>
