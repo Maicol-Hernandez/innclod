@@ -75,9 +75,9 @@ En la mayoría de los servidores, estas extensiones están activadas por defecto
 ## Respuesta: Para eliminar un documento registrado en el sistema siga los siguientes pasos.
 
 - Hacer clic en el botón "Delete" ubicado dentro de la tabla "Documents".
-- Será redirigido hacia el formulario "Edit Document".
+- Se mostrará una modal de confirmación.
 - Editar los valores dentro del formulario.
-- Hacer clic él en botón "save", para guardar.
+- Al hacer clic en el botón "Yes, delete" el registro será eliminado.
 # 8.¿Cómo buscar por documento?
 ## Respuesta: Para buscar por documento en el sistema siga los siguientes pasos.
 
