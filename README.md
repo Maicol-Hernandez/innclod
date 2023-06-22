@@ -7,7 +7,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-# ¿Cuáles son los requisitos del servidor para activar el script?
+# 1.¿Cuáles son los requisitos del servidor para activar el script?
 ## Respuesta: Para instalar el Script los requisitos mínimos del servidor son:
 
 - [Php version 8.2+]
@@ -22,14 +22,34 @@
 
 En la mayoría de los servidores, estas extensiones están activadas por defecto, pero debe consultar a su proveedor de alojamiento.
 
-## Learning Laravel
+# 2.¿Cómo instalar el script?
+## Respuesta: Para instalar el script siga los siguientes pasos.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- Extraiga el archivo .zip descargado en su PC o el código directamente desde GitHub.
+- Cargue el archivo .zip en el directorio public_html de su servidor o en cualquier otro directorio en el que desee ejecutar.
+- Extraiga el archivo zip en ese directorio.
+- Cree una nueva base de datos a partir de la base de datos MySQL de su servidor.
+- Cree un usuario DB para la base de datos y vincule esa base de datos al usuario DB.
+- Configure las variables de entorno a partir del archivo .env-example.
+- Escribe por la consola el comando [php artisan migrate fresh --seed].
+- Escribe el comando en una nueva consola [npm install].
+- Escribe el comando en una nueva consola [npm run dev].
+- Pulse en la URL amigable generada por el comando [php artisan serve].
+# 3.¿Cómo iniciar sesión al sistema?
+## Respuesta: Para iniciar sesión en el sitema siga los siguientes pasos.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- Presione en el botón [Log in].
+- Navegar a la página de [Log in]
+- Ingresar el campo Email el siguiente correo [test@example.com].
+- Ingresar el campo Password la siguiente contraseña [test12345].
+- Hacer clic en el botón de "Log in" para acceder al sistema.
+# 3.¿Cómo registrase en el sistema?
+## Respuesta: Para registrase en el sitema siga los siguientes pasos.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
+- Presione en el botón [Register].
+- Navegar a la página de [Register]
+- Llenar los campos Name, Email, Password y Confirm Parssword.
+- Hacer clic en el botón de "Register" para acceder al sistema.
 ## Laravel Sponsors
 
 We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
