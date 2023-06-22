@@ -39,9 +39,10 @@ class DatabaseSeeder extends Seeder
 
         $process = Process::factory(5)->create();
 
-        $documents = Document::factory(5)->make()->each(function (Document $document) use ($typeDocument, $process) {
+        $documents = Document::factory(5)->make()->each(function (Document $document) use ($typeDocument, $process, $user) {
             $document->type_document_id = $typeDocument->random()->id;
             $document->process_id = $process->random()->id;
+            $document->user_id = $user->id;
 
             $document->save();
             $document->code = $this->documentService->generateCode($process->random()->code, $typeDocument->random()->code, $document->id);

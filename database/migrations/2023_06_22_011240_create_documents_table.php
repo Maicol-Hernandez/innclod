@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('documents', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('user_id')->unsigned();
             $table->string('name', 60);
             $table->string('code', 10)->nullable()->unique();
             $table->string('description', 4000);
@@ -20,6 +21,7 @@ return new class extends Migration
             $table->bigInteger('process_id')->unsigned();
             $table->timestamps();
 
+            $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('type_document_id')->references('id')->on('type_documents');
             $table->foreign('process_id')->references('id')->on('processes');
         });

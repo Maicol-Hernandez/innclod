@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Models\Process;
 use App\Models\TypeDocument;
+use App\Models\Scopes\UserScope;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -12,6 +13,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
  * Class Document
  *
  * @property integer $id
+ * @property integer $user_id
  * @property string $name
  * @property string $code
  * @property string $description
@@ -35,12 +37,25 @@ class Document extends Model
      * @var array
      */
     protected $fillable = [
+        // 'user_id',
         'name',
         'code',
         'description',
         'type_document_id',
         'process_id',
     ];
+
+    
+    /**
+     * The "booted" method of the model.
+     *
+     * @return void
+     */
+    protected static function booted()
+    {
+        static::addGlobalScope(new UserScope);
+
+    }
 
 
     /**
@@ -61,5 +76,15 @@ class Document extends Model
     public function process(): BelongsTo
     {
         return $this->belongsTo(Process::class);
+    }
+
+    /**
+     * Get the user that owns the Document
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function user(): BelongsTo
+    {
+        return $this->belongsTo(User::class);
     }
 }
