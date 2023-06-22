@@ -14,7 +14,7 @@ class TypeDocumentController extends Controller
      */
     public function index()
     {
-        //
+        $typeDocuments = TypeDocument::all();
     }
 
     /**

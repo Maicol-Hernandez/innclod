@@ -14,7 +14,7 @@ class ProcessController extends Controller
      */
     public function index()
     {
-        //
+        $process = Process::all();
     }
 
     /**

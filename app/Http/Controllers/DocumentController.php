@@ -3,18 +3,30 @@
 namespace App\Http\Controllers;
 
 use App\Models\Document;
+use App\Services\DocumentService;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreDocumentRequest;
 use App\Http\Requests\UpdateDocumentRequest;
 
 class DocumentController extends Controller
 {
+
+    protected DocumentService $documentService;
+
+    public function __construct(DocumentService $documentService)
+    {
+        $this->documentService = $documentService;
+    }
+
+
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        $documents = Document::all();
     }
 
     /**
@@ -30,7 +42,25 @@ class DocumentController extends Controller
      */
     public function store(StoreDocumentRequest $request)
     {
-        //
+        DB::beginTransaction();
+        try {
+            $document = Document::create($request->all());
+
+            $document->code = $this->documentService->generateCode(
+                $document->process->code,
+                $document->typeDocument->code,
+                $document->id
+            );
+            $document->save();
+            DB::commit();
+        } catch (\Exception $e) {
+            Log::error($e);
+            DB::rollback();
+            // return response()->json([
+            //     'status' => 'ERROR',
+            //     'message' => 'Something went wrong',
+            // ]);
+        }
     }
 
     /**
@@ -54,7 +84,30 @@ class DocumentController extends Controller
      */
     public function update(UpdateDocumentRequest $request, Document $document)
     {
-        //
+        DB::beginTransaction();
+        try {
+            $document->update($request->all());
+
+            $document->code = $this->documentService->generateCode(
+                $document->process->code,
+                $document->typeDocument->code,
+                $document->id
+            );
+            $document->save();
+            DB::commit();
+        } catch (\Exception $e) {
+            Log::error($e);
+            DB::rollback();
+            return response()->json([
+                'status' => 'ERROR',
+                'message' => 'Something went wrong',
+            ]);
+        }
+
+        return response()->json([
+            'status' => 'SUCCESS',
+            'message' => 'Document has been updated successfully',
+        ]);
     }
 
     /**
@@ -62,6 +115,16 @@ class DocumentController extends Controller
      */
     public function destroy(Document $document)
     {
-        //
+        if ($document->delete()) {
+            // return response()->json([
+            //     'status' => 'SUCCESS',
+            //     'message' => 'Document has been deleted successfully',
+            // ]);
+        } else {
+            // return response()->json([
+            //     'status' => 'ERROR',
+            //     'message' => 'Something went wrong',
+            // ]);
+        }
     }
 }
