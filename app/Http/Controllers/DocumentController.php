@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Inertia\Inertia;
 use App\Models\Document;
 use App\Services\DocumentService;
 use Illuminate\Support\Facades\DB;
@@ -27,6 +28,7 @@ class DocumentController extends Controller
     public function index()
     {
         $documents = Document::all();
+        return Inertia::render('Documents/Index', ['documents' => $documents]);
     }
 
     /**
@@ -34,7 +36,7 @@ class DocumentController extends Controller
      */
     public function create()
     {
-        //
+        return Inertia::render('Documents/Create');
     }
 
     /**
@@ -56,11 +58,10 @@ class DocumentController extends Controller
         } catch (\Exception $e) {
             Log::error($e);
             DB::rollback();
-            // return response()->json([
-            //     'status' => 'ERROR',
-            //     'message' => 'Something went wrong',
-            // ]);
+            return back();
         }
+
+        return redirect('documents');
     }
 
     /**
@@ -76,7 +77,7 @@ class DocumentController extends Controller
      */
     public function edit(Document $document)
     {
-        //
+        return Inertia::render('Documents/Edit', ['document' => $document]);
     }
 
     /**
@@ -98,16 +99,10 @@ class DocumentController extends Controller
         } catch (\Exception $e) {
             Log::error($e);
             DB::rollback();
-            return response()->json([
-                'status' => 'ERROR',
-                'message' => 'Something went wrong',
-            ]);
+            return back();
         }
 
-        return response()->json([
-            'status' => 'SUCCESS',
-            'message' => 'Document has been updated successfully',
-        ]);
+        return redirect('documents');
     }
 
     /**
@@ -116,15 +111,9 @@ class DocumentController extends Controller
     public function destroy(Document $document)
     {
         if ($document->delete()) {
-            // return response()->json([
-            //     'status' => 'SUCCESS',
-            //     'message' => 'Document has been deleted successfully',
-            // ]);
+            return redirect('documents');
         } else {
-            // return response()->json([
-            //     'status' => 'ERROR',
-            //     'message' => 'Something went wrong',
-            // ]);
+            return back();
         }
     }
 }

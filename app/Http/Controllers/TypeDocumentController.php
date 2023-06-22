@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Inertia\Inertia;
 use App\Models\TypeDocument;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreTypeDocumentRequest;
@@ -15,6 +16,7 @@ class TypeDocumentController extends Controller
     public function index()
     {
         $typeDocuments = TypeDocument::all();
+        return Inertia::render('TypeDocuments/Index', ['typeDocuments' => $typeDocuments]);
     }
 
     /**

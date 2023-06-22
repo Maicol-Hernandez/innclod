@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Inertia\Inertia;
 use App\Models\Process;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreProcessRequest;
@@ -14,7 +15,8 @@ class ProcessController extends Controller
      */
     public function index()
     {
-        $process = Process::all();
+        $processes = Process::all();
+        return Inertia::render('Processes/Index', ['processes' => $processes]);
     }
 
     /**
