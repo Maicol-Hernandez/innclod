@@ -41,10 +41,10 @@ En la mayoría de los servidores, estas extensiones están activadas por defecto
 - Presione en el botón [Log in].
 - Navegar a la página de [Log in]
 - Ingresar el campo Email el siguiente correo [test@example.com].
-- Ingresar el campo Password la siguiente contraseña [test12345].
+- Ingresar el campo Password la siguiente contraseña **[test12345]**.
 - Hacer clic en el botón de "Log in" para acceder al sistema.
-# 3.¿Cómo registrase en el sistema?
-## Respuesta: Para registrase en el sitema siga los siguientes pasos.
+# 3.¿Cómo registrarse en el sistema?
+## Respuesta: Para registrarse en el sitema siga los siguientes pasos.
 
 - Presione en el botón [Register].
 - Navegar a la página de [Register]
