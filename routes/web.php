@@ -1,9 +1,12 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
-use Illuminate\Foundation\Application;
-use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Foundation\Application;
+use App\Http\Controllers\ProcessController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\DocumentController;
+use App\Http\Controllers\TypeDocumentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,4 +38,20 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+/**
+ * Document
+ */
+Route::resource('Documents', DocumentController::class)->except(['edit', 'create']);
+
+/**
+ * Process
+ */
+Route::resource('processes', ProcessController::class)->only(['index']);
+
+/**
+ * Type Document
+ */
+Route::resource('type-documents', TypeDocumentController::class)->only(['index']);
+
+
+require __DIR__ . '/auth.php';
