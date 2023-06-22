@@ -7,6 +7,8 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p> -->
 
+![Logo Innclod](public/images/logo_innclod.png)
+# Diagrama Entidad Relación
 ![Texto alternativo](public/images/innclod_db.png)
 
 # 1.¿Cuáles son los requisitos del servidor para activar el script?
