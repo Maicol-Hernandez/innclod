@@ -3,15 +3,16 @@
 namespace App\Http\Controllers;
 
 use Inertia\Inertia;
+use App\Models\Process;
 use App\Models\Document;
+use App\Models\TypeDocument;
 use App\Services\DocumentService;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Request;
 use App\Http\Requests\StoreDocumentRequest;
 use App\Http\Requests\UpdateDocumentRequest;
-use App\Models\Process;
-use App\Models\TypeDocument;
 
 class DocumentController extends Controller
 {
@@ -29,8 +30,13 @@ class DocumentController extends Controller
      */
     public function index()
     {
-        $documents = Document::all();
-        return Inertia::render('Documents/Index', ['documents' => $documents]);
+        return Inertia::render('Documents/Index', [
+            'documents' => Document::query()
+                ->when(Request::input('search'), function ($query, $search) {
+                    $query->orWhere('code', 'like', "%{$search}%");
+                    $query->orWhere('name', 'like', "%{$search}%");
+                })->get()
+        ]);
     }
 
     /**
