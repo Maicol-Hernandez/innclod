@@ -10,6 +10,8 @@ use Illuminate\Support\Facades\Log;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreDocumentRequest;
 use App\Http\Requests\UpdateDocumentRequest;
+use App\Models\Process;
+use App\Models\TypeDocument;
 
 class DocumentController extends Controller
 {
@@ -36,7 +38,13 @@ class DocumentController extends Controller
      */
     public function create()
     {
-        return Inertia::render('Documents/Create');
+        $processes = Process::all();
+        $typeDocuments = TypeDocument::all();
+
+        return Inertia::render('Documents/Create', [
+            'processes' => $processes,
+            'typeDocuments' => $typeDocuments
+        ]);
     }
 
     /**
@@ -77,7 +85,12 @@ class DocumentController extends Controller
      */
     public function edit(Document $document)
     {
-        return Inertia::render('Documents/Edit', ['document' => $document]);
+        $processes = Process::all();
+        $typeDocuments = TypeDocument::all();
+
+        return Inertia::render('Documents/Edit', [
+            'document' => $document, 'processes' => $processes, 'typeDocuments' => $typeDocuments
+        ]);
     }
 
     /**
