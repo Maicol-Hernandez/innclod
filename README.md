@@ -43,6 +43,7 @@ En la mayoría de los servidores, estas extensiones están activadas por defecto
 - Ingresar el campo Email el siguiente correo `test@example.com`.
 - Ingresar el campo Password la siguiente contraseña `test12345`.
 - Hacer clic en el botón de "Log in" para acceder al sistema.
+- Si todo ha salido bien, saldrá el siguiente mensaje "You're logged in!".
 # 3.¿Cómo registrarse en el sistema?
 ## Respuesta: Para registrarse en el sitema siga los siguientes pasos.
 
@@ -50,6 +51,7 @@ En la mayoría de los servidores, estas extensiones están activadas por defecto
 - Navegar a la página de Registe`
 - Llenar los campos Name, Email, Password y Confirm Parssword.
 - Hacer clic en el botón de "Register" para acceder al sistema.
+- Si todo ha salido bien, saldrá el siguiente mensaje "You're logged in!".
 ## Laravel Sponsors
 
 We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
