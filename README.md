@@ -45,7 +45,7 @@ En la mayoría de los servidores, estas extensiones están activadas por defecto
 - Ingresar el campo Password la siguiente contraseña `test12345`.
 - Hacer clic en el botón de "Log in" para acceder al sistema.
 - Si todo ha salido bien, saldrá el siguiente mensaje "You're logged in!".
-# 3.¿Cómo registrarse en el sistema?
+# 4.¿Cómo registrarse en el sistema?
 ## Respuesta: Para registrarse en el sitema siga los siguientes pasos.
 
 - Presione en el botón Register.
@@ -53,7 +53,7 @@ En la mayoría de los servidores, estas extensiones están activadas por defecto
 - Llenar los campos Name, Email, Password y Confirm Parssword.
 - Hacer clic en el botón de "Register" para acceder al sistema.
 - Si todo ha salido bien, saldrá el siguiente mensaje "You're logged in!".
-# 4.¿Cómo crear un nuevo documento?
+# 5.¿Cómo crear un nuevo documento?
 ## Respuesta: Para agregar un documento nuevo en el sistema siga los siguientes pasos.
 
 - Presione en el botón ubicado en Navbar superior donde dice "Documents".
@@ -63,7 +63,7 @@ En la mayoría de los servidores, estas extensiones están activadas por defecto
 - Llenar los campos requeridos para crear un nuevo documento.
 - Hacer clic él en botón "save", para guardar.
 - Si todo ha salido bien, será redireccionado a la tabla de "Documents".
-# 5.¿Cómo editar un documento?
+# 6.¿Cómo editar un documento?
 ## Respuesta: Para editar un documento registrado en el sistema siga los siguientes pasos.
 
 - Hacer clic en el botón "Edit" ubicado dentro de la tabla "Documents".
@@ -71,15 +71,20 @@ En la mayoría de los servidores, estas extensiones están activadas por defecto
 - Editar los valores dentro del formulario.
 - Hacer clic él en botón "save", para guardar.
 - Si todo ha salido bien, será redireccionado a la tabla de "Documents".
-# 6.¿Cómo eliminar un documento?
+# 7.¿Cómo eliminar un documento?
 ## Respuesta: Para eliminar un documento registrado en el sistema siga los siguientes pasos.
 
 - Hacer clic en el botón "Delete" ubicado dentro de la tabla "Documents".
 - Será redirigido hacia el formulario "Edit Document".
 - Editar los valores dentro del formulario.
 - Hacer clic él en botón "save", para guardar.
-- Si todo ha salido bien, será redireccionado a la tabla de "Documents".
-# 7.¿Cómo cerrar sesión?
+# 8.¿Cómo buscar por documento?
+## Respuesta: Para buscar por documento en el sistema siga los siguientes pasos.
+
+- Hacer clic sobre el campo "Search" ubicado en la parte superior derecha de la tabla "Documents".
+- Escribe el texto a buscar.
+- Serán mostrados los datos dentro de la tabla que coincidan con la búsqueda.
+# 9.¿Cómo cerrar sesión?
 ## Respuesta: Para cerrar sesión en el sistema siga los siguientes pasos.
 
 - Hacer clic en el botón "Dashboard" ubicado en la parte superior izquierda del Navbar.
