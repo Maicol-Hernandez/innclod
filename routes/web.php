@@ -39,7 +39,7 @@ Route::middleware('auth')->group(function () {
     /**
      * Document
      */
-    Route::resource('Documents', DocumentController::class)->except(['edit', 'create']);
+    Route::resource('documents', DocumentController::class);
 
     /**
      * Process
