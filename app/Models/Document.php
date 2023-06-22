@@ -37,7 +37,7 @@ class Document extends Model
      * @var array
      */
     protected $fillable = [
-        // 'user_id',
+        'user_id',
         'name',
         'code',
         'description',
