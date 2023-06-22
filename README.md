@@ -31,23 +31,23 @@ En la mayoría de los servidores, estas extensiones están activadas por defecto
 - Cree una nueva base de datos a partir de la base de datos MySQL de su servidor.
 - Cree un usuario DB para la base de datos y vincule esa base de datos al usuario DB.
 - Configure las variables de entorno a partir del archivo .env-example.
-- Escribe por la consola el comando [php artisan migrate fresh --seed].
-- Escribe el comando en una nueva consola [npm install].
-- Escribe el comando en una nueva consola [npm run dev].
-- Pulse en la URL amigable generada por el comando [php artisan serve].
+- Escribe por la consola el comando `php artisan migrate fresh --seed`.
+- Escribe el comando en una nueva consola `npm install`.
+- Escribe el comando en una nueva consola `npm run dev`.
+- Pulse en la URL amigable generada por el comando `php artisan serve`.
 # 3.¿Cómo iniciar sesión al sistema?
 ## Respuesta: Para iniciar sesión en el sitema siga los siguientes pasos.
 
-- Presione en el botón [Log in].
-- Navegar a la página de [Log in]
-- Ingresar el campo Email el siguiente correo [test@example.com].
-- Ingresar el campo Password la siguiente contraseña **[test12345]**.
+- Presione en el botón Log in.
+- Navegar a la página de Log in
+- Ingresar el campo Email el siguiente correo `test@example.com`.
+- Ingresar el campo Password la siguiente contraseña `test12345`.
 - Hacer clic en el botón de "Log in" para acceder al sistema.
 # 3.¿Cómo registrarse en el sistema?
 ## Respuesta: Para registrarse en el sitema siga los siguientes pasos.
 
-- Presione en el botón [Register].
-- Navegar a la página de [Register]
+- Presione en el botón Register.
+- Navegar a la página de Registe`
 - Llenar los campos Name, Email, Password y Confirm Parssword.
 - Hacer clic en el botón de "Register" para acceder al sistema.
 ## Laravel Sponsors
