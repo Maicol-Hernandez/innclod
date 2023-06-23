@@ -35,12 +35,12 @@ class DocumentController extends Controller
                 ->when(Request::input('search'), function ($query, $search) {
                     $query->orWhere('code', 'like', "%{$search}%");
                     $query->orWhere('name', 'like', "%{$search}%");
-                    $query->orWhereHas('process', function ($query) use ($search) {
-                        $query->orWhere('name', 'like', "%{$search}%");
-                    });
-                    $query->orWhereHas('typeDocument', function ($query) use ($search) {
-                        $query->orWhere('name', 'like', "%{$search}%");
-                    });
+                    // $query->orWhereHas('process', function ($query) use ($search) {
+                    //     $query->orWhere('name', 'like', "%{$search}%");
+                    // });
+                    // $query->orWhereHas('typeDocument', function ($query) use ($search) {
+                    //     $query->orWhere('name', 'like', "%{$search}%");
+                    // });
                 })->with('process', 'typeDocument')->get()
         ]);
     }
