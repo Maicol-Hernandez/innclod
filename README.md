@@ -80,7 +80,6 @@ En la mayoría de los servidores, estas extensiones están activadas por defecto
 
 - Hacer clic en el botón "Delete" ubicado dentro de la tabla "Documents".
 - Se mostrará una modal de confirmación.
-- Editar los valores dentro del formulario.
 - Al hacer clic en el botón "Yes, delete" el registro será eliminado.
 # 8.¿Cómo buscar por documento?
 ## Respuesta: Para buscar por documento en el sistema siga los siguientes pasos.
